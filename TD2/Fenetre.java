@@ -1,12 +1,11 @@
-
 /**
  * Example of a Fenetre (JFrame) using awt and swing
+ *
  * @author your_name
  */
 
-import java.awt.BorderLayout;
-
 import javax.swing.*;
+import java.awt.*;
 
 public class Fenetre extends JFrame {
 
@@ -23,6 +22,25 @@ public class Fenetre extends JFrame {
     /** Creates a Fenetre */
     public Fenetre() {
         initComponents();
+    }
+
+    static private void buttonPressed(Fenetre f, JTextField text, JLabel userName) {
+        // text.getText();
+        System.out.println("Bonjour : " + text.getText());
+        userName.setText("Bonjour : " + text.getText());
+        f.add("West", userName);
+        f.label.setVisible(false);
+        text.setVisible(false);
+        userName.setVisible(true);
+
+    }
+
+    /** main entry point */
+    public static void main(String[] args) {
+        Fenetre f = new Fenetre();
+
+        //Action event listenre
+        f.button.addActionListener(e -> buttonPressed(f, f.text, f.userName));
     }
 
     /** Initializes the Fenetre components */
@@ -52,25 +70,6 @@ public class Fenetre extends JFrame {
         this.setVisible(true);
 
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
-    }
-
-    static private void buttonPressed(Fenetre f, JTextField text, JLabel userName) {
-        // text.getText();
-        System.out.println("Bonjour : " + text.getText());
-        userName.setText("Bonjour : " + text.getText());
-        f.add("West", userName);
-        f.label.setVisible(false);
-        text.setVisible(false);
-        userName.setVisible(true);
-
-    }
-
-    /** main entry point */
-    public static void main(String[] args) {
-        Fenetre f = new Fenetre();
-
-        //Action event listenre
-        f.button.addActionListener(e -> buttonPressed(f, f.text, f.userName));
     }
 
 }

@@ -1,20 +1,23 @@
-import people.*;
+import people.EnsChercheurArray;
+import people.IChercheur;
+import people.Personne;
+
 public class HelloChercheurArray {
-  
-  public static void main(String[] args){
-    // implementing array 
 
-    IChercheur ensChercheur = new EnsChercheurArray("Dupont", "Jean", 20);
+    public static void main(String[] args) {
+        // implementing array
 
-    System.out.println("Hello Chercheur ARRAY "+ ensChercheur);
-    System.out.println();
+        IChercheur ensChercheur = new EnsChercheurArray("Dupont", "Jean", 20);
 
-    ensChercheur.ajuterPublication("Using Interfaces in Java, Dupont J., 2021");
+        System.out.println("Hello Chercheur ARRAY " + ensChercheur);
+        System.out.println();
 
-    System.out.println("Hello Chercheur ARRAY "+ensChercheur);
-    System.out.println();
+        ensChercheur.ajuterPublication("Using Interfaces in Java, Dupont J., 2021");
 
-    System.out.println("Total de personnes: " +Personne.getNombrePersonnes());
+        System.out.println("Hello Chercheur ARRAY " + ensChercheur);
+        System.out.println();
 
-  }
+        System.out.println("Total de personnes: " + Personne.getNombrePersonnes());
+
+    }
 }

@@ -7,7 +7,7 @@ public class Professeur extends Personne {
     private String placeOfWork;
     private String adress;
 
-    public Professeur(String nomPersonne, String prenomPersonne, int agePersonne,int id, String domain, double salary, String placeOfWork, String adress) {
+    public Professeur(String nomPersonne, String prenomPersonne, int agePersonne, int id, String domain, double salary, String placeOfWork, String adress) {
         super(nomPersonne, prenomPersonne, agePersonne);
         this.id = id;
         this.domain = domain;
@@ -57,7 +57,7 @@ public class Professeur extends Personne {
         this.adress = adress;
     }
 
-  public String toString(){
-    return(super.toString() + ", salary: " + salary);
-  }
+    public String toString() {
+        return (super.toString() + ", salary: " + salary);
+    }
 }

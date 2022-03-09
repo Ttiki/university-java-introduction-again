@@ -5,23 +5,23 @@ package ui;// File Name : Comunica.java
 // License : license
 //
 // Supplementary information : infos
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.*;
 
 public class Comunica {
-    // CONSTANTES - no -
-    // ATTRIBUTES - no -
-    private BufferedWriter writer;
-    private BufferedReader reader;
-
     public JPanel panel1;
     public JLabel lmessrec;
     public JTextField txtToSend;
     public JButton bSend;
     public JButton bReceive;
     public JTextArea textRec;
+    // CONSTANTES - no -
+    // ATTRIBUTES - no -
+    private BufferedWriter writer;
+    private BufferedReader reader;
     private JLabel lmesssend;
 
     private Comunica linkedComunica;
@@ -51,8 +51,8 @@ public class Comunica {
                 System.out.println("Receive  button pressed!");
                 String line;
                 try {
-                    while((line = reader.readLine()) != null) {
-                        textRec.append(line+"\n");
+                    while ((line = reader.readLine()) != null) {
+                        textRec.append(line + "\n");
 
                     }
                     reader.close();

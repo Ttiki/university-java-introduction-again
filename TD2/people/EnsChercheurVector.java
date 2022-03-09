@@ -1,34 +1,34 @@
 package people;
-import java.util.*;
+
+import java.util.Vector;
 
 
+public class EnsChercheurVector extends Personne implements IChercheur {
 
-public class EnsChercheurVector extends Personne implements IChercheur{
+    private Vector publications;
 
-  private Vector publications;
-
-  public EnsChercheurVector(String nomPersonne, String prenomPersonne, int agePersonne){
-    super(nomPersonne, prenomPersonne, agePersonne);
-    publications = new Vector();
-  }
-
-  public void ajuterPublication(String publication){
-    publications.add(publication);
-  } 
-
-  public String getPublications(){
-    String listePublications = "";
-    
-    for (int i = 0; i < publications.size(); i++){
-      String pub = (String) publications.elementAt(i);
-      listePublications = listePublications +"\n"+ pub;
+    public EnsChercheurVector(String nomPersonne, String prenomPersonne, int agePersonne) {
+        super(nomPersonne, prenomPersonne, agePersonne);
+        publications = new Vector();
     }
-    return listePublications;   
-  }
 
-  public String toString(){
-    return (super.toString() + "\n Liste de publications : " + getPublications());
+    public void ajuterPublication(String publication) {
+        publications.add(publication);
+    }
 
-  }
+    public String getPublications() {
+        String listePublications = "";
+
+        for (int i = 0; i < publications.size(); i++) {
+            String pub = (String) publications.elementAt(i);
+            listePublications = listePublications + "\n" + pub;
+        }
+        return listePublications;
+    }
+
+    public String toString() {
+        return (super.toString() + "\n Liste de publications : " + getPublications());
+
+    }
 
 }

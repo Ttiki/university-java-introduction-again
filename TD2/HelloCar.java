@@ -1,9 +1,10 @@
-import transportation.*;
+import transportation.Car;
+import transportation.IVehicle;
 
-public class HelloCar{
-   public static void main(String[] args){
-     IVehicle car = new Car("Opel");
+public class HelloCar {
+    public static void main(String[] args) {
+        IVehicle car = new Car("Opel");
 
-     System.out.println(car);
-   }
+        System.out.println(car);
+    }
 }

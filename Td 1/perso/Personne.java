@@ -1,12 +1,11 @@
 package perso;
 
 public class Personne {
+    // Static Attribute
+    private static int lastID = 0;
     private String nom;
     private String prenom;
     private int age;
-
-    // Static Attribute
-    private static int lastID = 0;
 
     //
     public Personne(String nom, String prenom, int age) {
@@ -29,16 +28,12 @@ public class Personne {
         return this.nom;
     }
 
-    public int getAge() {
-        return this.age;
-    }
-
-    public String getPreno() {
-        return this.prenom;
-    }
-
     public void setNom(String nomPersonne) {
         nom = nomPersonne;
+    }
+
+    public int getAge() {
+        return this.age;
     }
 
     public void setAge(int agePersonne) {
@@ -46,6 +41,10 @@ public class Personne {
             age = agePersonne;
         else
             age = 0;
+    }
+
+    public String getPreno() {
+        return this.prenom;
     }
 
     public void SetPrenom(String prenom) {

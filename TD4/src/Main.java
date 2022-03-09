@@ -1,3 +1,5 @@
+import ui.Comunica;
+
 import java.io.IOException;
 
 public class Main {
@@ -16,7 +18,7 @@ public class Main {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        cw2.buildUI();
+
         //cw.SENDButton.addActionListener(e->CommunicationWindow.buttonPressed(cw));
     }
 }

@@ -1,20 +1,23 @@
-import people.*;
+import people.EnsChercheurTreeSet;
+import people.IChercheur;
+import people.Personne;
+
 public class HelloChercheurTreeSet {
-  
-  public static void main(String[] args){
 
-    // implementing TreeSet 
+    public static void main(String[] args) {
 
-    IChercheur ensChercheurTreeSet = new EnsChercheurTreeSet("Dupont", "Jean", 20);
-    System.out.println("Hello Chercheur3 TreeSet "+ensChercheurTreeSet);
-    System.out.println();
+        // implementing TreeSet
 
-    ensChercheurTreeSet.ajuterPublication("Using Interfaces in Java, Dupont J., 2021");
+        IChercheur ensChercheurTreeSet = new EnsChercheurTreeSet("Dupont", "Jean", 20);
+        System.out.println("Hello Chercheur3 TreeSet " + ensChercheurTreeSet);
+        System.out.println();
 
-    System.out.println("Hello Chercheur3 TreeSet "+ensChercheurTreeSet);
-    System.out.println();
+        ensChercheurTreeSet.ajuterPublication("Using Interfaces in Java, Dupont J., 2021");
 
-    System.out.println("Total de personnes: " +Personne.getNombrePersonnes());
+        System.out.println("Hello Chercheur3 TreeSet " + ensChercheurTreeSet);
+        System.out.println();
 
-  }
+        System.out.println("Total de personnes: " + Personne.getNombrePersonnes());
+
+    }
 }
